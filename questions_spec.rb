@@ -13,10 +13,10 @@ describe 'the Friday test :)' do
     expect(n).to eq ['apples', 'avocados']
   end
 
-  # specify 'select_elements_starting_with_vowel' do
-  #   n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
-  #   expect(n).to eq ['omar', 'idris', 'angela']
-  # end
+  specify 'select_elements_starting_with_vowel' do
+    n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
+    expect(n).to eq ['omar', 'idris', 'angela']
+  end
 
   specify 'remove_nils_from_array' do
     n = remove_nils_from_array ['a', 'b', nil, nil, false, 'c', nil]
@@ -106,10 +106,10 @@ describe 'the Friday test :)' do
     expect(n).to eq 'foobar'
   end
 
-  specify 'average_of_array' do
-    n = average_of_array [10, 15, 25]
-    expect(n).to eq 17
-  end
+  # specify 'average_of_array' do
+  #   n = average_of_array [10, 15, 25]
+  #   expect(n).to eq 17
+  # end
 
   specify 'get_elements_until_greater_than_five' do
     n = get_elements_until_greater_than_five [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]

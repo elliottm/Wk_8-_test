@@ -5,7 +5,7 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-	array.select { |e| e[0] == [/[^aioeu]/] }
+	array.select { |e| e[0] == [/^aioeu/] }
 end
 
 # remove instances of nil (but NOT false) from an array
@@ -113,7 +113,8 @@ end
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 33
 def average_of_array(array)
-	((array.inject { |memo, number| memo + number }.ceil) / (array.count).ceil)
+	a = (array.inject { |memo, number| memo + number } / array.count)
+	a.round(0).ceil
 end
 
 # get all the elements in an array, up until the first element
@@ -179,6 +180,7 @@ end
 # get the domain name *without* the .com part, from an email address
 # so alex@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+	email.match[/@*/]
 end
 
 # capitalize the first letter in each word of a string, 
